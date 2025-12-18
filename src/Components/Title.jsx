@@ -2,7 +2,7 @@ import React from "react";
 export default function Title({ title_text }) {
   return (
     <div>
-      <p className="w-42.5  rounded-sm border-r-3p bg-[#063560] text-[1.4rem] text-center  ">
+      <p className="border-r-3p w-42.5 rounded-sm bg-[#063560] text-center text-[1.4rem]">
         {title_text}{" "}
       </p>
     </div>

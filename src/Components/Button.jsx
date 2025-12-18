@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Button({ btn_text, children }) {
   return (
-    <button className="bg-[#0788ff] px-8 py-5 rounded-[30px] text-xl text-white transition-colors duration-300 ease-in-out font-semibold flex justify-center items-center gap-5 w-fit h-15 hover:bg-black hover:border-2 hover:border-white">
+    <button className="h-15 w-36 rounded-[40px] bg-[#0788ff] text-[1.3rem] text-white transition-colors duration-300 ease-in-out hover:border-2 hover:border-white hover:bg-black">
       {btn_text}
       {children}
     </button>
