@@ -12,11 +12,11 @@ import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="text-white w-full min-h-screen mx-auto box-border bg-[#051f36]   ">
+    <div className="bg-gradient   text-white w-full overflow-y-hidden overflow-x-hidden min-h-screen box-border  .">
       <BrowserRouter>
         <div className="pt-5 ">
           <Navbar />
-          {/* <div className="mt-12">
+          <div className="mt-12">
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path={"/about_me"} element={<About_Me />} />
@@ -24,7 +24,7 @@ function App() {
               <Route path={"/services"} element={<Services />} />
               <Route path={"/contact"} element={<Contact />} />
             </Routes>
-          </div> */}
+          </div>
         </div>
       </BrowserRouter>
     </div>

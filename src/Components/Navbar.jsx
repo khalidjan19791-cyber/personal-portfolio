@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Button from "./Button";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FaArrowCircleLeft } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
@@ -14,10 +14,17 @@ export default function Navbar() {
           Khalid Jan
         </h1>
         <div className="lg:hidden">
-          <GiHamburgerMenu
-            onClick={() => setMenu(!menu)}
-            className="bg-transparent text-3xl"
-          />
+          {menu ? (
+            <RxCross2
+              className="text-3xl font-bold"
+              onClick={() => setMenu(false)}
+            />
+          ) : (
+            <GiHamburgerMenu
+              onClick={() => setMenu(!menu)}
+              className="bg-transparent text-3xl"
+            />
+          )}
         </div>
       </div>
       <div className="hidden items-center justify-center gap-10 lg:flex">
@@ -70,8 +77,12 @@ export default function Navbar() {
         <Button btn_text={"LET'S TALK"} />
       </div>
       {/* ---------------- Sub Menu--------- */}
-      {menu ? (
-        <div className="absolute top-20 flex h-80 w-full flex-col items-center justify-center bg-[#040C16] px-0 lg:hidden">
+      <div
+        className={` ${menu ? "translate-x-0 opacity-100" : "translate-x-40 opacity-0"} absolute top-20 flex h-screen w-full px-0 transition-all duration-1000 lg:hidden`}
+      >
+        <div
+          className={`flex h-full w-[50%] flex-col rounded-2xl bg-[#040C16] px-3 py-3 transition-all duration-1000`}
+        >
           <div className="flex flex-col items-center justify-center gap-6">
             <NavLink
               className={
@@ -120,9 +131,7 @@ export default function Navbar() {
             </NavLink>
           </div>
         </div>
-      ) : (
-        ""
-      )}
+      </div>
     </div>
   );
 }
