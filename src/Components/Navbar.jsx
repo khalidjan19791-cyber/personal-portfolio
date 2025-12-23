@@ -6,15 +6,29 @@ import { RxCross2 } from "react-icons/rx";
 
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     // -------------main menu---------
-    <div className="relative flex h-10 w-full items-center justify-between lg:m-auto lg:h-14 lg:w-[90vw] lg:px-0">
-      <div className="box-content flex w-full items-center justify-between px-6 lg:w-40">
-        <h1 className="cursor-pointer text-[1.6rem] font-bold lg:text-[2rem]">
-          Khalid Jan
-        </h1>
-        <div className="lg:hidden">
-          {menu ? (
+    <div className="relative flex h-10 w-full items-center justify-between lg:m-auto lg:h-14 lg:w-[85vw] lg:px-0">
+      <div className="box-content flex w-full items-center justify-between px-6 lg:w-40 lg:px-0">
+        <div className=" ">
+          <h1 className="cursor-pointer text-[1.8rem] font-bold">Khalid Jan</h1>
+        </div>
+        <div
+          className="lg:hidden"
+          onClick={() => {
+            setOpen(!open);
+            console.log("working");
+          }}
+        >
+          {/* <UseAnimations
+            animation={menuToClose}
+            size={32}
+            strokeColor="white"
+            reverse={open}
+          /> */}
+
+          {/* {menu ? (
             <RxCross2
               className="text-3xl font-bold"
               onClick={() => setMenu(false)}
@@ -24,13 +38,14 @@ export default function Navbar() {
               onClick={() => setMenu(!menu)}
               className="bg-transparent text-3xl"
             />
-          )}
+          )} */}
         </div>
       </div>
       <div className="hidden items-center justify-center gap-10 lg:flex">
         <NavLink
+          onClick={() => setMenu(false)}
           className={
-            "flex cursor-pointer flex-col items-center text-[1.2rem] font-bold text-white no-underline"
+            "flex cursor-pointer flex-col items-center font-bold text-white no-underline"
           }
           to={"/"}
         >
@@ -39,7 +54,7 @@ export default function Navbar() {
         </NavLink>
         <NavLink
           className={
-            "flex cursor-pointer flex-col items-center text-[1.2rem] font-bold text-white no-underline"
+            "flex cursor-pointer flex-col items-center font-bold text-white no-underline"
           }
           to={"/about_me"}
         >
@@ -48,7 +63,7 @@ export default function Navbar() {
         </NavLink>
         <NavLink
           className={
-            "flex cursor-pointer flex-col items-center text-[1.2rem] font-bold text-white no-underline"
+            "flex cursor-pointer flex-col items-center font-bold text-white no-underline"
           }
           to={"/project"}
         >
@@ -57,7 +72,7 @@ export default function Navbar() {
         </NavLink>
         <NavLink
           className={
-            "flex cursor-pointer flex-col items-center text-[1.2rem] font-bold text-white no-underline"
+            "flex cursor-pointer flex-col items-center font-bold text-white no-underline"
           }
           to={"/services"}
         >
@@ -67,7 +82,7 @@ export default function Navbar() {
         <NavLink
           to="/contact"
           className={
-            "flex cursor-pointer flex-col items-center text-[1.2rem] font-bold text-white no-underline"
+            "] flex cursor-pointer flex-col items-center font-bold text-white no-underline"
           }
         >
           Contact

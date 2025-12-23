@@ -14,3 +14,7 @@ a.active .custom-hr {
     #050c16 101.48%
   );
 }
+
+* {
+  box-sizing: border-box;
+}

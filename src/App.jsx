@@ -12,11 +12,14 @@ import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="bg-gradient   text-white w-full overflow-y-hidden overflow-x-hidden min-h-screen box-border  .">
+    <div className="min-w-[320px] bg-gradient text-white  overflow-y-hidden overflow-x-hidden min-h-screen box-border   ">
       <BrowserRouter>
-        <div className="pt-5 ">
+        <div
+          className="pt-5 px-3 sm:w-[85vw]   sm:m-auto lg:w-[85vw]   lg:px-0
+         "
+        >
           <Navbar />
-          <div className="mt-12">
+          <div className="mt-12 ">
             <Routes>
               <Route path={"/"} element={<Home />} />
               <Route path={"/about_me"} element={<About_Me />} />
