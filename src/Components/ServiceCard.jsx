@@ -19,6 +19,8 @@ export default function ServiceCard({ assets }) {
                 alt={item.title}
                 className="h-full w-full rounded-2xl object-cover sm:w-[50vw]"
               />
+              <div className="absolute inset-0 bg-black/60"></div>
+
               <div className="absolute bottom-0 flex flex-col gap-2 text-[white]">
                 {Icon && (
                   <Icon className="ml-2 rounded bg-[#0788FF] text-[50px] text-white" />

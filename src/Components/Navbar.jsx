@@ -58,7 +58,7 @@ export default function Navbar() {
           }
           to={"/about_me"}
         >
-          About Me
+          About
           <hr className="custom-hr hidden w-9 rounded-2xl border-t-3 border-white" />
         </NavLink>
         <NavLink

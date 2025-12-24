@@ -2,10 +2,8 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Button from "../Components/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
-import { TiSocialLinkedinCircular } from "react-icons/ti";
-import { FaGithub } from "react-icons/fa";
 import Title from "../Components/Title";
+import Social_icon from "../Components/Social_icon";
 
 export default function Home() {
   const [text] = useTypewriter({
@@ -16,8 +14,8 @@ export default function Home() {
   });
 
   return (
-    <div className="flex flex-col justify-between items-center  gap-7 lg:flex-row ">
-      <div className="flex flex-col gap-3 w-full h-full         ">
+    <div className="flex flex-col justify-between items-center gap-15 lg:flex-row ">
+      <div className="flex flex-col gap-3 w-[70%] h-full">
         <Title title_text={"KHALID JAN"} />
         <h2 className="font-bold text-[2rem] lg:text-[3rem]   ">
           Hy! I’M KHALID JAN
@@ -35,27 +33,18 @@ export default function Home() {
           <Button btn_text={"GET IN TOUCH"}>
             {""} <FaArrowRightLong />{" "}
           </Button>
-          <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/khalidjan.jan.792" target="blank">
-              <FaFacebook className="text-[46px]  text-[#1877f2]" />
-            </a>
-            <a href="www.linkedin.com/in/khalidjan" target="blank">
-              <TiSocialLinkedinCircular className="text-[66px] text-[#1275b1] " />
-            </a>
-            <a href="https://github.com/khalidjan19791-cyber" target="blank">
-              <FaGithub className="text-[46px] text-white" />
-            </a>
-          </div>
+          <Social_icon />
         </div>
       </div>
-      <div className="h-[70vh] hidden border-white     ">
+      <div className="h-[70vh] hidden lg:flex lg:flex-col  lg:justify-between border-white     ">
         <div className="h-30 w-1 bg-white rounded-2xl "></div>
         <div className="h-6 w-1 bg-white rounded-2xl"></div>
         <div className="h-30 w-1 bg-white rounded-2xl "></div>
         <div className="h-6 w-1 bg-white rounded-2xl"></div>
         <div className="h-30 w-1 bg-white rounded-2xl "></div>
       </div>
-      <div className="w-full h-full flex justify-center md:w-[70vw] lg:w-[45vw] items-center  lg:h-[70vh]  ">
+
+      <div className="w-full h-full flex justify-center md:w-[70vw] lg:w-[30vw] items-center  lg:h-[70vh]  ">
         <img
           src="/myimg-nobg.png"
           alt="Not Found"

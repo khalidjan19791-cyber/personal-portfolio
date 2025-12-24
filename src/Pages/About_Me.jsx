@@ -14,6 +14,16 @@ export default function About_Me() {
           className="rounded-4xl h-full   object-cover"
         />
       </div>
+      <div
+        className="w-[30%] lg:h-[78vh]   flex flex-col justify-between items-center
+      "
+      >
+        <div className="h-30 w-1 bg-white rounded-2xl "></div>
+        <div className="h-6 w-1 bg-white rounded-2xl"></div>
+        <div className="h-30 w-1 bg-white rounded-2xl "></div>
+        <div className="h-6 w-1 bg-white rounded-2xl"></div>
+        <div className="h-30 w-1 bg-white rounded-2xl "></div>
+      </div>
 
       <div className="w-full flex flex-col  gap-4  lg:justify-center  ">
         <div className="flex gap-2 flex-col">
