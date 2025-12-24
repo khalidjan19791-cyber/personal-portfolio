@@ -12,7 +12,7 @@ import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div className="min-w-[320px] bg-gradient text-white  overflow-y-hidden overflow-x-hidden min-h-screen box-border   ">
+    <div className="min-w-[320px] bg-gradient  text-white  overflow-y-hidden overflow-x-hidden min-h-screen box-border   ">
       <BrowserRouter>
         <div
           className="pt-5 px-3 sm:w-[85vw]   sm:m-auto lg:w-[85vw]   lg:px-0
