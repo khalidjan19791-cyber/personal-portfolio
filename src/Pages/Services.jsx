@@ -1,13 +1,21 @@
 import React from "react";
 import Title from "../Components/Title";
-import Animation from "../Components/Animaiton";
+import ServiceCard from "../Components/ServiceCard";
+import { assets } from "../Assets/assets";
 
 export default function Services() {
   return (
-    <div className="sm:bg-amber-500 md:bg-blue-800 lg:bg-gray-500 xl:bg-black 2xl:bg-amber-700">
-      {/* <Title title_text={"SERVICES"} /> */}
-
-      <Animation />
-    </div>
+    <section className="w-full flex  flex-col gap-5  ">
+      <div className="flex flex-col gap-3">
+        <Title title_text={"Services"} />
+        <h1 className="text-[37px] font-bold">
+          DESIGN <span className="text-[#0788FF]">SERVICES </span> I AM
+          PROVIDING
+        </h1>
+      </div>
+      <div>
+        <ServiceCard assets={assets} />
+      </div>
+    </section>
   );
 }
