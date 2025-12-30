@@ -1,5 +1,5 @@
 {
-  "homepage": "https://(khalidjan19791-cyber).github.io/(personal-portfolio)",
+  "homepage": "https://khalidjan19791-cyber.github.io/personal-portfolio",
   "name": "personal_project",
   "private": true,
   "version": "0.0.0",
@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "format": "prettier --write .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -22,6 +22,7 @@
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
+    "gh-pages": "^6.3.0",
     "globals": "^16.5.0",
     "postcss": "^8.5.6",
     "prettier": "^3.7.4",
