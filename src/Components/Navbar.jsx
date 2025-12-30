@@ -4,46 +4,28 @@ import Button from "./Button";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
+import UseAnimations from "react-useanimations";
+import menu2 from "react-useanimations/lib/menu2";
 export default function Navbar() {
   const [menu, setMenu] = useState(false);
-  const [open, setOpen] = useState(false);
+
   return (
     // -------------main menu---------
     <div className="relative flex h-10 w-full items-center justify-between lg:m-auto lg:h-14 lg:w-[85vw] lg:px-0">
       <div className="box-content flex w-full items-center justify-between px-6 lg:w-40 lg:px-0">
-        <div className=" ">
-          <h1 className="cursor-pointer text-[1.8rem] font-bold">Khalid Jan</h1>
-        </div>
-        <div
-          className="lg:hidden"
-          onClick={() => {
-            setOpen(!open);
-            console.log("working");
-          }}
-        >
-          {/* <UseAnimations
-            animation={menuToClose}
+        <h1 className="cursor-pointer text-[1.8rem] font-bold">Khalid Jan</h1>
+        <div className="lg:hidden">
+          <UseAnimations
+            animation={menu2}
             size={32}
             strokeColor="white"
-            reverse={open}
-          /> */}
-
-          {/* {menu ? (
-            <RxCross2
-              className="text-3xl font-bold"
-              onClick={() => setMenu(false)}
-            />
-          ) : (
-            <GiHamburgerMenu
-              onClick={() => setMenu(!menu)}
-              className="bg-transparent text-3xl"
-            />
-          )} */}
+            speed={menu ? 1 : 2}
+            onClick={() => setMenu((prev) => !prev)}
+          />
         </div>
       </div>
       <div className="hidden items-center justify-center gap-10 lg:flex">
         <NavLink
-          onClick={() => setMenu(false)}
           className={
             "flex cursor-pointer flex-col items-center font-bold text-white no-underline"
           }
@@ -92,8 +74,14 @@ export default function Navbar() {
         <Button btn_text={"LET'S TALK"} />
       </div>
       {/* ---------------- Sub Menu--------- */}
+
       <div
-        className={` ${menu ? "translate-x-0 opacity-100" : "translate-x-40 opacity-0"} absolute top-20 flex h-screen w-full px-0 transition-all duration-1000 lg:hidden`}
+        onClick={() => setMenu(false)}
+        className={`${
+          menu
+            ? "translate-x-0 opacity-100"
+            : "translate-x-20 opacity-0 delay-200"
+        } absolute top-20 z-10 flex h-[85vh] w-full justify-end px-0 transition-all duration-1000 lg:hidden`}
       >
         <div
           className={`flex h-full w-[50%] flex-col rounded-2xl bg-[#040C16] px-3 py-3 transition-all duration-1000`}

@@ -4,11 +4,11 @@ import Social_icon from "../Components/Social_icon";
 
 export default function Contact() {
   return (
-    <section className="w-full md:p-10 ">
+    <section className="w-full md:p-5 ">
       <div className="  ">
         <div className="bg-[#051C34]  h-[35vh] rounded-t-xl   lg:h-[22vh] lg:w-full  lg:p-2  p-4 flex flex-col gap-5  md:h-[25vh]">
           <div className="lg:w-[50vw] flex flex-col gap-6  lg:flex lg:flex-col lg:gap-4   ">
-            <h1 className="text-[32px] font-semibold md:text-4xl">
+            <h1 className="text-[2rem] font-semibold md:text-4xl lg:text-[3rem]">
               Let's Discuss Your Project
             </h1>
             <p className="text-[17px] md:text-[20px]">
@@ -55,21 +55,23 @@ export default function Contact() {
               <Button btn_text={"SEND MESSAGE"} />
             </div>
           </form>
-          <div className="flex relative  lg:w-[50vw] lg:justify-end   text-white/70 flex-col gap-5">
-            <div className="hidden lg:block absolute -top-32 w-60 h-75  ">
+          <div className="flex relative lg:w-[50vw]  lg:justify-end items-center   text-white/70 flex-col gap-5">
+            <div className="hidden lg:block absolute -top-35 left-23 w-[17vw] h-[40vh]  ">
               <img
                 src="public\pic1.jpg"
                 alt="not found"
                 className="h-full w-full rounded-2xl object-cover"
               />
             </div>
-            <div>
-              <h3>WRITE AN E-MAIL</h3>
-              <h1 className="text-[22px] font-semibold">khalid@gmail.com</h1>
-            </div>
-            <div>
-              <h3>CONTACT - NUMBER</h3>
-              <h1 className="text-[22px] font-semibold">+92-734929484</h1>
+            <div className="flex flex-col gap-5">
+              <div>
+                <h3>WRITE AN E-MAIL</h3>
+                <h1 className="text-[22px] font-semibold">khalid@gmail.com</h1>
+              </div>
+              <div>
+                <h3>CONTACT - NUMBER</h3>
+                <h1 className="text-[22px] font-semibold">+92-734929484</h1>
+              </div>
             </div>
             <Social_icon />
           </div>

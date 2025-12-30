@@ -5,7 +5,12 @@ import App from "./App.jsx";
 import React from "react";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  // ------strict Mode -------
+
+  // <StrictMode>
+  //   <App />
+  // </StrictMode>
+
+  // -------------strict Mode is disable -------------------
+  <App />
 );

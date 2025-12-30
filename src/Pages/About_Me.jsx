@@ -15,7 +15,7 @@ export default function About_Me() {
         />
       </div>
       <div
-        className="w-[30%] lg:h-[78vh]   flex flex-col justify-between items-center
+        className="w-[30%] lg:h-[78vh] hidden   lg:flex flex-col justify-between items-center
       "
       >
         <div className="h-30 w-1 bg-white rounded-2xl "></div>
@@ -26,7 +26,7 @@ export default function About_Me() {
       </div>
 
       <div className="w-full flex flex-col  gap-4  lg:justify-center  ">
-        <div className="flex gap-2 flex-col">
+        <div className="flex gap-2 flex-col ">
           <Title title_text={"ABOUT ME"} />
           <p className="text-[35px] font-bold ">
             I AM AVAILABLE FOR{" "}

@@ -13,6 +13,7 @@ export default function Services() {
           PROVIDING
         </h1>
       </div>
+
       <div>
         <ServiceCard assets={assets} />
       </div>
